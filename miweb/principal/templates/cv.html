@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Renato Escárate</title>
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="{% static 'styles/cvstyle.css' %}">
+    <!-- Opcional: Enlace a Font Awesome para iconos (muy recomendado) -->
+    <link rel="stylesheet" href="{% static 'styless/cvstyle.css' %}">
+</head>
+<body>
+
+    <main class="cv-container">
+        <!-- SECCIÓN IZQUIERDA (ASIDE) -->
+        <aside class="cv-aside">
+            <div class="profile-section">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGB_FS6W2X9dA/profile-displayphoto-shrink_800_800/B4DZc2i5MJHMAc-/0/1748966807310?e=1755734400&v=beta&t=HXhCtKBvaK5PKqPit-Toz1nSXrvIhp2tc_exWy9d5z0" alt="Foto de perfil de Renato Escárate Fonseca" class="profile-pic">
+                <h1 class="name">Renato Escárate Fonseca</h1>
+                <h2 class="title">Ingeniero Informático</h2>
+            </div>
+
+            <div class="contact-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+56990042992">+56990042992</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:rescaratef@gmail.com">rescaratef@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Temuco, Chile</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/renato-escarate-fonseca-46b431369" target="_blank">linkedin.com/in/renato-escarate-fonseca-46b431369/</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/renaglock" target="_blank">github.com/renaglock</a></li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Python Full Stack</li>
+                    <li>Bases de Datos (SQL, MongoDB)</li>
+                    <li>Git & GitHub</li>
+                    <li>Metodologías Ágiles (Scrum)</li>
+                </ul>
+            </div>
+
+            <div class="languages-section">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li><strong>Español:</strong> Nativo</li>
+                    <li><strong>Inglés:</strong> Profesional (C1)</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- SECCIÓN DERECHA (MAIN CONTENT) -->
+        <section class="cv-main">
+            <div class="summary-section">
+                <h3>Perfil Profesional</h3>
+                <p>
+                    Estudiante de informática en la universidad catolica de temuco, con años de experiencia laboral en atención al cliente y administración.
+                    Busco una oportunidad para aplicar mis conocimientos en programación y desarrollo web. Soy una persona proactiva, con habilidades para trabajar en equipo y resolver problemas de manera eficiente.
+                </p>
+            </div>
+
+            <div class="experience-section">
+                <h3>Experiencia Laboral</h3>
+                
+                <div class="job-item">
+                    <h4>Garzon - runner | Black Boss, El Perejil</h4>
+                    <p class="date">Junio 2022 - Diciembre 2022</p>
+                    <ul>
+                        <li>Atención al cliente y servicio de alimentos y bebidas.</li>
+                        <li>Colaboración con el equipo de cocina para asegurar un servicio eficiente.</li>
+                    </ul>
+                </div>
+                <div class="job-item">
+                    <h4>Facturación y Administración | Verduleria Leo</h4>
+                    <p class="date">Enero 2023 - Abril 2023</p>
+                    <ul>
+                        <li>Emision diaria de facturas en venta de alimentos.</li>
+                        <li>Administración informática de los recursos de la empresa.</li>
+                        <li>Asesoría en procesos de mejora continua.</li>
+                    </ul>
+                 <div class="job-item">
+                    <h4>Maestro Planchero | La completeria, Slide Burger, Mamba</h4>
+                    <p class="date">Mayo 2024 - Diciembre 2024</p>
+                    <ul>
+                        <li>Preparacion de mise en place, organizando ingredientes, reduciendo la merma.</li>
+                        <li>Preparacion de comidas calientes en plancha y freidora, asegurando la calidad y presentación de los platos.</li>
+                        <li>Funcionamiento en caja y aplicaciones de punto de venta y delivery.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h3>Educación</h3>
+                <div class="education-item">
+                    <h4>Enseñanza Media | Instituto Salesiano de Valdivia</h4>
+                    <p class="date">2018 - 2020</p>
+                </div>
+                <div class="education-item">
+                    <h4>Ingeniería Informática | Universidad Católica de Temuco</h4>
+                    <p class="date">2022 - 2028</p>
+                </div>
+            </div>
+
+            <div class="projects-section">
+                <h3>Proyectos Destacados</h3>
+                <div class="project-item">
+                    <h4><a href="#" target="_blank">Página Personal</a></h4>
+                    <p>
+                        Creación de página web personal para mostrar mi CV y proyectos. Utilizando HTML, CSS, Python y Django. Implementación de un diseño responsivo y accesible.
+                    </p>
+                </div>               
+            </div>
+
+                </div>
+                <div class="contact-form-section">
+                <h3>Contacto</h3>
+
+                <!-- Contenedor para mostrar mensajes de éxito/error -->
+                {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <form method="post" class="contact-form">
+                    {% csrf_token %} <!-- ¡¡MUY IMPORTANTE para la seguridad de Django!! -->
+                    
+                    <div class="form-group">
+                        {{ form.nombre.label_tag }}
+                        {{ form.nombre }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.asunto.label_tag }}
+                        {{ form.asunto }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.mensaje.label_tag }}
+                        {{ form.mensaje }}
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

@@ -6,4 +6,5 @@ path('', views.saludo),
 path('saludo/<str:nombre>/', views.saludar_usuario),
 path('edad/<int:edad>/', views.edad),
 path('inicio/1/', views.inicio, name='inicio'),
+path('cv/', views.cv, name='cv'),
 ]

@@ -46,7 +46,7 @@ def cv(request):
                 messages.error(request, f'Hubo un error al enviar el mensaje: {e}')
 
             # Redirigimos a la misma página para evitar reenvíos del formulario
-            return redirect('pagina_cv') 
+            return redirect('cv') 
     else:
         # Si el método es GET, simplemente mostramos un formulario vacío
         form = FormularioContacto()

@@ -1,3 +1,21 @@
 body {
-    background-color:darkcyan;
+    background-color:#1331d6a6;
+    font-size: 32px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #ffd60f;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    background-image:
+        linear-gradient(rgba(5, 40, 238, 0.76), rgba(210, 213, 226, 0.945)),
+        url(https://img2.wallspic.com/crops/8/9/1/6/4/146198/146198-supremo-3840x2160.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    .imagen-sombra-interior {
+        border-radius: 1%;
+        box-shadow: inset 30px 30px 30px rgba(51, 49, 184, 0.774);
+    }
 }
+
